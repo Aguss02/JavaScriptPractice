@@ -1,0 +1,73 @@
+/* EJERCICIO 1 */
+
+console.log(' ********** Ejercicio 1 **********')
+
+let estudiante = {
+    nombre : 'Agustina',
+    apellido : 'Tosi',
+    camada : 6,
+    esParcial : true
+}
+
+let nota = function(numero){
+    console.log(`El alumno obtuvo una nota igual a ${numero} por lo tanto su condición es: `)
+    if (numero < 4){
+        return 'Desaprobado'
+    } else if (numero >= 4 && numero < 7){
+        return 'Debe rendir examen final'
+    } else {
+        return '¡Promocionado!'
+    }
+}
+
+console.log(nota(8))
+
+/* EJERCICIO 2 */
+console.log(' ********** Ejercicio 2 **********')
+
+let clase = [
+    {
+        nombre : 'Yazmin',
+        apellido : 'Erazo',
+        bimestre : 2
+    },
+    {
+        nombre : 'Sol',
+        apellido : 'Zito',
+        bimestre : 2
+    },
+    {
+        nombre : 'Helena',
+        apellido : 'Guerra',
+        bimestre : 2
+    },
+]
+
+console.log('---- Antes de la función ----')
+console.log(clase)
+
+let siguienteCursada = function(){
+    for (let i = 0; i < clase.length; i++) {
+    clase[i].bimestre += 1 
+    }
+    return clase
+}
+
+console.log('---- Después de la función ----')
+console.log(siguienteCursada())
+
+console.log(' ********** Ejercicio 3 **********')
+
+const asistenciaMinima = 23
+
+let notaFinal = (cantAsistencias, condicionFinal) => {
+    if( cantAsistencias <= asistenciaMinima && condicionFinal == 'Completo'){
+        return '¡Aprobado!'
+    } else {
+        return 'Desaprobado'
+    }
+}
+
+console.log(notaFinal(22, 'Incompleto'))
+console.log(notaFinal(28, 'Completo'))
+console.log(notaFinal(2, 'Completo'))
